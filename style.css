@@ -484,3 +484,22 @@
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       footer { padding: 2rem 1.5rem; }
     }
+
+    /* Hide custom cursor on touch/mobile devices (360px–992px) */
+    @media (max-width: 992px) {
+      .cursor, .cursor-ring { display: none; }
+      body { cursor: auto; }
+    }
+
+    /* Fix info-row text wrapping on small screens (360px–460px) */
+    @media (max-width: 460px) {
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+      }
+      .info-val {
+        text-align: right;
+        width: 100%;
+      }
+    }
